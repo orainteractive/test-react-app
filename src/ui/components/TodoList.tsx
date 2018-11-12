@@ -35,6 +35,10 @@ const SubmitTodo = styled.button`
   grid-area: submit;
   font-size: 1rem;
   font-weight: 300;
+  background-color: white;
+  border: 1px solid #0003;
+  border-radius: 3px;
+  cursor: pointer;
 `;
 
 async function handleFormSubmit(e: any, addTodo: Function) {
