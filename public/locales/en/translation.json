@@ -1,4 +1,5 @@
 {
-  "app.title": "P202 Test App",
-  "app.description": "Description Here."
+  "app.title": "PROJEKT20Do",
+  "todo.add-todo-placeholder": "Type here to add a todo...",
+  "todo.submit-new-todo": "Add todo"
 }

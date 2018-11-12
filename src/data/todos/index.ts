@@ -8,7 +8,7 @@ export type TodoType = {
 };
 
 export type TodoAttrsType = {
-  title: string;
+  title?: string;
   isDone?: boolean;
   archivedAt?: string;
 };
@@ -27,6 +27,10 @@ export async function editTodo(id: string, attrs: TodoAttrsType) {
   return axios.patch(`${API_ENDPOINT}/todos/${id}.json`, attrs);
 }
 
-export async function createTodo(attrs: TodoAttrsType) {
-  return axios.post(`${API_ENDPOINT}/todos.json`, attrs);
+export async function markTodoAsDone(id: string) {
+  return editTodo(id, { isDone: true });
+}
+
+export async function createTodo(title: string) {
+  return axios.post(`${API_ENDPOINT}/todos.json`, { title });
 }
