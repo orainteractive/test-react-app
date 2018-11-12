@@ -34,8 +34,8 @@ export async function editTodo(id: string, attrs: TodoAttrsType) {
   return axios.patch(`${API_ENDPOINT}/todos/${id}.json`, attrs);
 }
 
-export async function markTodoAsDone(id: string) {
-  return editTodo(id, { isDone: true });
+export async function markTodo(id: string, isDone: boolean) {
+  return editTodo(id, { isDone });
 }
 
 export async function createTodo(title: string) {
