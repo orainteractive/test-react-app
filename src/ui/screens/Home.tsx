@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "react-emotion/macro";
-import { getTodos, createTodo } from "data/todos";
+import { getTodos, createTodo, markTodo } from "data/todos";
 
 import { TodoListContainer } from "ui/components";
 
@@ -43,10 +43,18 @@ export class Home extends React.Component {
     await createTodo(title);
     this.getTodos();
   };
+  markTodo = async (id: string, isDone: boolean) => {
+    await markTodo(id, isDone);
+    this.getTodos();
+  };
   render() {
     return (
       <Wrapper>
-        <TodoListWrapper addTodo={this.addTodo} todos={this.state.todos} />
+        <TodoListWrapper
+          addTodo={this.addTodo}
+          markTodo={this.markTodo}
+          todos={this.state.todos}
+        />
       </Wrapper>
     );
   }

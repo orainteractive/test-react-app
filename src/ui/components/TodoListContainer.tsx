@@ -44,12 +44,14 @@ const Content = styled.section`
 
 export function TodoListContainer({
   todos,
+  markTodo,
   className,
   addTodo,
   ...props
 }: {
   todos: TodoType[];
   addTodo: Function;
+  markTodo: Function;
   className?: string;
 }) {
   return (
@@ -60,7 +62,7 @@ export function TodoListContainer({
             <Title>{t("app.title")}</Title>
           </Header>
           <Content>
-            <TodoList addTodo={addTodo} todos={todos} />
+            <TodoList addTodo={addTodo} markTodo={markTodo} todos={todos} />
           </Content>
           <Footer />
         </div>

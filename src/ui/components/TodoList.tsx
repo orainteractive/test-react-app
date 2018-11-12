@@ -7,6 +7,7 @@ import { TodoListItem } from "ui/components";
 type TodoListPropsType = {
   todos: TodoType[];
   addTodo: Function;
+  markTodo: Function;
 };
 
 const List = styled.ul`
@@ -20,15 +21,20 @@ const AddTodoForm = styled.form`
   width: 100%;
   grid-template-areas: "input submit";
   grid-template-columns: 4fr 1fr;
-  margin-top: 1rem;
+  padding: 1rem 0;
 `;
 
 const TodoInput = styled.input`
   grid-area: input;
+  font-size: 1.5rem;
+  font-weight: 300;
+  border: none;
 `;
 
 const SubmitTodo = styled.button`
   grid-area: submit;
+  font-size: 1rem;
+  font-weight: 300;
 `;
 
 async function handleFormSubmit(e: any, addTodo: Function) {
@@ -38,13 +44,18 @@ async function handleFormSubmit(e: any, addTodo: Function) {
   await addTodo(title);
 }
 
-export function TodoList({ todos, addTodo, ...props }: TodoListPropsType) {
+export function TodoList({
+  todos,
+  addTodo,
+  markTodo,
+  ...props
+}: TodoListPropsType) {
   return (
     <NamespacesConsumer ns="translation">
       {t => (
         <List {...props}>
           {todos.map(todo => (
-            <TodoListItem key={todo.id} todo={todo} />
+            <TodoListItem markTodo={markTodo} key={todo.id} todo={todo} />
           ))}
           <li>
             <AddTodoForm onSubmit={(e: any) => handleFormSubmit(e, addTodo)}>
