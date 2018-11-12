@@ -30,6 +30,7 @@ export class Home extends React.Component {
   getTodos = async () => {
     const { data } = await getTodos();
     if (data === null) return this.setState({ todos: [] });
+    // Converts an object with IDs as keys into an array of objects
     const todos = Object.entries(data).map(([id, attrs]: [String, Object]) => ({
       ...attrs,
       id
