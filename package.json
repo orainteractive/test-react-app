@@ -1,6 +1,7 @@
 {
   "name": "p202-test",
   "version": "0.1.0",
+  "license": "ISC",
   "private": true,
   "dependencies": {
     "@types/i18next": "^11.9.3",
