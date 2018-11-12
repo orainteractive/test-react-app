@@ -8,7 +8,7 @@ export type TodoType = {
   archivedAt?: string;
 };
 
-export type TodoAttrsType = {
+type TodoAttrsType = {
   title?: string;
   isDone?: boolean;
   archivedAt?: string;
