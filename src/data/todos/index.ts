@@ -14,7 +14,7 @@ type TodoAttrsType = {
   archivedAt?: string;
 };
 
-const API_ENDPOINT = "https://p202-test.firebaseio.com";
+export const API_ENDPOINT = "https://p202-test.firebaseio.com";
 
 export async function getTodos() {
   return await axios.get(`${API_ENDPOINT}/todos.json`);
