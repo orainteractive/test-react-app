@@ -7,7 +7,7 @@ import { TodoType } from "data/todos";
 const BORDER_RADIUS = 6;
 
 const styles = css`
-  box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0.25rem 1rem var(--black-10);
   display: grid;
   grid-template-areas:
     "header"
@@ -32,13 +32,13 @@ const Footer = styled.footer`
 const Title = styled.h1`
   margin: 0;
   line-height: 1;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  text-shadow: 0 1px 2px var(--black-20);
 `;
 
 const Content = styled.section`
   grid-area: content;
   padding: 1rem;
-  background-color: white;
+  background-color: var(--white);
   border-radius: 0 0 ${BORDER_RADIUS}px ${BORDER_RADIUS}px;
 `;
 
