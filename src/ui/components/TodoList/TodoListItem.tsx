@@ -10,7 +10,7 @@ const Label = styled.label`
   display: flex;
   align-items: center;
   padding: 0.5rem 0;
-  border-bottom: 1px solid #0001;
+  border-bottom: 1px solid var(--black-07);
   cursor: pointer;
 `;
 
@@ -24,7 +24,7 @@ const TodoTitle = styled.span`
   flex: 1;
   margin-left: 0.5em;
   font-weight: 300;
-  color: rgba(0, 0, 0, 0.8);
+  color: var(--black-80);
   line-height: 1;
   ${getOpacity};
   ${getTextDecoration};
