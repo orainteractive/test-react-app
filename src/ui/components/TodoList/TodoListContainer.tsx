@@ -20,8 +20,8 @@ const styles = css`
 const Header = styled.header`
   grid-area: header;
   padding: 1rem;
-  color: white;
-  background-color: burlywood;
+  color: var(--white);
+  background-color: var(--burlywood);
   border-radius: ${BORDER_RADIUS}px ${BORDER_RADIUS}px 0 0;
 `;
 
