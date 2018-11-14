@@ -21,8 +21,8 @@ const SubmitTodo = styled.button`
   grid-area: submit;
   font-size: 1rem;
   font-weight: 300;
-  background-color: white;
-  border: 1px solid #0003;
+  background-color: var(--white);
+  border: 1px solid var(--black-10);
   border-radius: 3px;
   cursor: pointer;
 `;
